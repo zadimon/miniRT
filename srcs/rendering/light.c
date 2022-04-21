@@ -6,7 +6,7 @@
 /*   By: ebhakaz <ebhakaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 19:24:03 by ebhakaz           #+#    #+#             */
-/*   Updated: 2022/04/21 18:05:20 by ebhakaz          ###   ########.fr       */
+/*   Updated: 2022/04/21 18:37:44 by ebhakaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ t_ray	get_l_ray(t_vec v_p, t_vec v_l)
 	l_ray.v_o = v_p;
 	l_ray.v_d = v_l;
 	norm_vec(&l_ray.v_d);
-	l_ray.t_max = HUGE_VAL;
-	l_ray.t_min = 1e-6;
+	l_ray.t_max = MAXFLOAT;
+	l_ray.t_min = 0.1;
 	return (l_ray);
 }
 

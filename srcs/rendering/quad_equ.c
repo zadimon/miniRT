@@ -6,7 +6,7 @@
 /*   By: ebhakaz <ebhakaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 22:40:43 by ebhakaz           #+#    #+#             */
-/*   Updated: 2022/04/21 16:38:07 by ebhakaz          ###   ########.fr       */
+/*   Updated: 2022/04/21 18:44:31 by ebhakaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,10 @@ int	check_height(t_cy *cy, t_ray *ray, t_vec v_cy, t_equ *equ)
 	float	m1;
 	float	m2;
 
-	ray->m = 1;
 	m1 = scal_mul(mul_on_num(ray->v_d, equ->t1), *cy->cy_vec)
 		+ scal_mul(v_cy, *cy->cy_vec);
 	m2 = scal_mul(mul_on_num(ray->v_d, equ->t2), *cy->cy_vec)
 		+ scal_mul(v_cy, *cy->cy_vec);
-	if (m1 < 0 || m1 > cy->cy_hei)
-		ray->m = -1;
 	if ((m1 < 0 || m1 > cy->cy_hei) && (m2 < 0 || m2 > cy->cy_hei))
 		return (0);
 	if (m1 < 0 || m1 > cy->cy_hei)

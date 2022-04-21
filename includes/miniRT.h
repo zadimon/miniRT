@@ -6,7 +6,7 @@
 /*   By: ebhakaz <ebhakaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 11:46:15 by ebhakaz           #+#    #+#             */
-/*   Updated: 2022/04/21 18:06:52 by ebhakaz          ###   ########.fr       */
+/*   Updated: 2022/04/21 18:44:14 by ebhakaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,7 +131,6 @@ typedef struct s_ray
 	t_fig	*closest_fig;
 	float	t_max;
 	float	t_min;
-	float	m;
 }			t_ray;
 
 typedef struct s_to_lig
